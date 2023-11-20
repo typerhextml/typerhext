@@ -4,6 +4,10 @@
     <p align="center">The TyperHext Markup Language</p>
 </p>
 
+
+
+
+
 ## About
 
 TyperHext is a markup language designed to be as powerful as HTML and as simple as Markdown.
