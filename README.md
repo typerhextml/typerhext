@@ -4,9 +4,9 @@
     <p align="center">The TyperHext Markup Language</p>
 </p>
 
-
-
-
+<br>
+<br>
+<br>
 
 ## About
 
