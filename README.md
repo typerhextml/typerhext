@@ -70,3 +70,23 @@ You are able to escape the following characters:
 
 - new lines, this will just make the compiler ignore there is a new line and just continues to write to the current one.
 - backslashes (`\`) as they are used for escaping itself.
+- full stops (`.`) as they are used for new lines [under some conditions](#full-stop-escaping).
+
+#### Full stop escaping
+
+You have to escape full stops if you are using them without other characters in a line.
+
+**Escape required:**
+```thml
+If you forget to escape the full stop in the next line, it will be converted to a line break.
+.
+```
+
+**Escape not needed:**
+```thml
+.thml is a common file ending for TyperHext files
+```
+or
+```thml
+TyperHext is cool.
+```
