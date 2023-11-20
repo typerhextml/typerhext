@@ -28,12 +28,12 @@ In TyperHext, you can choose from two types of headings: the normal ones and the
 
 | HTML Heading type | TyperHext prefix |
 |:---:|:---:|
-| H1 | `!> ` |
-| H2 | `!-> ` |
-| H3 | `!--> ` |
-| H4 | `!---> ` |
-| H5 | `!----> ` |
-| H6 | `!-----> ` |
+| P > H1 | `!> ` |
+| P > H2 | `!-> ` |
+| P > H3 | `!--> ` |
+| P > H4 | `!---> ` |
+| P > H5 | `!----> ` |
+| P > H6 | `!-----> ` |
 
 #### Auto-paragraph headings
 
