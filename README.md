@@ -56,6 +56,12 @@ This is a
 multiline paragraph.
 ```
 
+will result in
+
+```html
+This is a multiline<br>paragraph.
+```
+
 ### Escaping
 
 You can escape some characters with the backslash (`\`).
