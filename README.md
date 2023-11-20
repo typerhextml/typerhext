@@ -4,11 +4,17 @@
     <p align="center">The TyperHext Markup Language</p>
 </p>
 
+## About
+
+TyperHext is a markup language designed to be as powerful as HTML and as simple as Markdown.
+
+**Note:** This is still in development and not ready to use yet, but it will be soon!
+
 ## Basic syntax
 
-### Headers
+### Headings
 
-| Header type | TyperHext prefix |
+| HTML Heading type | TyperHext prefix |
 |:---:|:---:|
 | H1 | `!- ` |
 | H2 | `!-- ` |
