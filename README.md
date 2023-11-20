@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./logo.svg" align="center">
+    <a href="https://typerhext.com/"><img src="./logo.svg" align="center"></a>
     <h1 align="center">THML</h1>
     <p align="center">The TyperHext Markup Language</p>
 </p>
