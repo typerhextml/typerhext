@@ -46,6 +46,16 @@ In TyperHext, you can choose from two types of headings: the normal ones and the
 | H5 | `!----- ` |
 | H6 | `!------ ` |
 
+### New lines
+
+If you want to use line breaks in paragraphs, you have to put a full stop (`.`) between the new lines. You even can use multiple of them!
+
+```thml
+This is a
+.
+multiline paragraph.
+```
+
 ### Escaping
 
 You can escape some characters with the backslash (`\`).
