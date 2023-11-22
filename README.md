@@ -37,6 +37,10 @@ In TyperHext, you can choose from two types of headings: the normal ones and the
 
 #### Auto-paragraph headings
 
+> [!WARNING]\
+> This type of heading can currently not be converted to HTML because headings are not allowed in paragraphs. See this [StackOverflow answer](https://stackoverflow.com/a/38892009) for more info.
+> It's therefore currently not recommended to use them.
+
 | HTML Heading type | TyperHext prefix |
 |:---:|:---:|
 | H1 | `!- ` |
@@ -60,6 +64,34 @@ will result in
 
 ```html
 This is a multiline<br>paragraph.
+```
+
+### Bold text
+
+You can use two asterisks (`**`) to make text **bold**. You can use this in Markdown too, but the `__` bold formatting method is not supported in THML.
+
+```thml
+This text is **bold**.
+```
+
+### Italic text
+
+You can use two underscores (`__`) to make text _italic_. Notice that you cannot use one undescore as in Markdown.
+
+```thml
+This text is __italic__.
+```
+
+### Special characters
+
+THML is supporting special characters like the rocket emoji (:rocket:), you just have to type in the name of the character and put colons (`:`) before and behind it.
+
+- **[Here is a table containig all special characters with names](./docs/specialcharslist.md)**
+
+Also, you can directly put the Unicode id in the hexadecimal format between the two colons and normal brackets:
+
+```thml
+This is the rocket emoji\: :(1f680):
 ```
 
 ### Escaping
