@@ -94,6 +94,8 @@ Also, you can directly put the Unicode id in the hexadecimal format between the 
 This is the rocket emoji\: :(1f680):
 ```
 
+Both notations are case-insensitive.
+
 ### Escaping
 
 You can escape some characters with the backslash (`\`).
