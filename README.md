@@ -22,33 +22,18 @@ You just can simply type any text you want anywhere you want, the HyperText comp
 
 ### Headings
 
-In TyperHext, you can choose from two types of headings: the normal ones and the auto-paragraph headings. Auto-paragraph headings will first create a new paragraph and place themselves in it while normal headings just create a normal heading.
+These headers will only work when the line they're in is empty.
 
-#### Normal headings
+**Note:** It's recommended to use the H1-Headings only once in a document, just like in HTML. For bigger text, you should use styling.
 
-| HTML Heading type | TyperHext prefix |
+| HTML syntax | TyperHext syntax |
 |:---:|:---:|
-| P > H1 | `!> ` |
-| P > H2 | `!-> ` |
-| P > H3 | `!--> ` |
-| P > H4 | `!---> ` |
-| P > H5 | `!----> ` |
-| P > H6 | `!-----> ` |
-
-#### Auto-paragraph headings
-
-> [!WARNING]\
-> This type of heading can currently not be converted to HTML because headings are not allowed in paragraphs. See this [StackOverflow answer](https://stackoverflow.com/a/38892009) for more info.
-> It's therefore currently not recommended to use them.
-
-| HTML Heading type | TyperHext prefix |
-|:---:|:---:|
-| H1 | `!- ` |
-| H2 | `!-- ` |
-| H3 | `!--- ` |
-| H4 | `!---- ` |
-| H5 | `!----- ` |
-| H6 | `!------ ` |
+| `<h1>Heading 1</h1>` | `=== Heading 1 ===` |
+| `<h2>Heading 2</h2>` | `== Heading 2 ==` |
+| `<h3>Heading 3</h3>` | `= Heading 3 =` |
+| `<h4>Heading 4</h4>` | `--- Heading 4 ---` |
+| `<h5>Heading 5</h5>` | `-- Heading 5 --` |
+| `<h6>Heading 6</h6>` | `- Heading 6 -` |
 
 ### New lines
 
@@ -123,4 +108,48 @@ If you forget to escape the full stop in the next line, it will be converted to 
 or
 ```thml
 TyperHext is cool.
+```
+
+### Tagging
+
+You are able to tag blocks in THML with a CSS-like selector syntax using sqare brackets. This syntax is really useful combined with [styling](#styling).
+
+| HTML | TyperHext | CSS |
+|:---:|:---:|:---:|
+| `id="my-id"` | `#my-id` | `#my-id` |
+| `class="my-class"` | `.my-class` | `.my-class` |
+| `class="my-class1 my-class2"` | `.my-class1.my-class2` | `.my-class1.my-class2` |
+| `my-tag="yes"` | `my-tag: yes` | `[my-tag="yes"]` |
+| `my-tag` | `my-tag` | `[my-tag]` |
+
+```thml
+[#my-id]This block has the ID <my-id>.
+
+[.my-class]This part of the block has the class <my-class>.[/] And this part doesn't.
+
+[.my-class2 /]This block has the class <my-id2>.
+
+And this one too![/]
+
+[div]This is not a div! It will get the tag <div>.
+
+[#my-id2.my-class3.my-class4; aria-label: My custom label!; custom-attr: mytext]This has lots of tags applied.
+
+[/]Error: nothing to close.
+```
+
+### Styling
+
+THML supports CSS, SCSS and SASS styling. To open a style block, start with `%<styling language>` and end it with a single `%`.
+
+**Example:**
+```thml
+%scss
+    .important {
+        color: red;
+        font-weight: 700;
+    }
+%
+
+[.important]Important:[/] TyperHext supports styling.
 ```
