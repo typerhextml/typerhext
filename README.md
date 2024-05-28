@@ -217,6 +217,10 @@ will compile to
 </a>
 ```
 
+### Disable paragraph output
+
+Simply start the paragraph with a tilde (`~`), so the compiler won't wrap it in a `<p>` element.
+
 ### Styling
 
 THML supports CSS, SCSS and SASS styling. To open a style block, start with `%<styling language>` and end it with a single `%`.
