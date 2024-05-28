@@ -115,12 +115,12 @@ TyperHext is cool.
 
 You are able to tag blocks in THML with a CSS-like selector syntax using sqare brackets. This syntax is really useful combined with [styling](#styling).
 
->[!TIP]
->Tag blocks use `span` on the text level and `div` on the block level if not specified.
+> [!TIP]
+> Tag blocks use `span` on the text level and `div` on the block level if not specified.
 >
->If you want to enforce a `div` block, type `[- #my-id]`.
+> If you want to enforce a `div` block, type `[- #my-id]`.
 >
->If you want to enforce a `span` block, type `[~ #my-id]`.
+> If you want to enforce a `span` block, type `[~ #my-id]`.
 
 | HTML | TyperHext | CSS |
 |:---:|:---:|:---:|
@@ -150,8 +150,8 @@ And this one too![/]
 
 You can add hyperlinks to blocks. The TyperHext compiler decides how it will compile the code into HTML like that:
 
->[!NOTE]
->Tag blocks work the same way.
+> [!NOTE]
+> Tag blocks work the same way.
 
 **Example 1:**
 
@@ -221,6 +221,16 @@ will compile to
 ### Disable paragraph output
 
 Simply start the paragraph with a tilde (`~`), so the compiler won't wrap it in a `<p>` element.
+
+#### Use a div instead
+
+```thml
+[ /]~This is not in
+.
+a paragraph.[/]
+```
+
+###
 
 ### Styling
 
