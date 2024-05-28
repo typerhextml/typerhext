@@ -114,6 +114,13 @@ TyperHext is cool.
 
 You are able to tag blocks in THML with a CSS-like selector syntax using sqare brackets. This syntax is really useful combined with [styling](#styling).
 
+>[!TIP]
+>Tag blocks use `span` on the text level and `div` on the block level if not specified.
+>
+>If you want to enforce a `div` block, type `[- #my-id]`.
+>
+>If you want to enforce a `span` block, type `[~ #my-id]`.
+
 | HTML | TyperHext | CSS |
 |:---:|:---:|:---:|
 | `id="my-id"` | `#my-id` | `#my-id` |
@@ -136,6 +143,78 @@ And this one too![/]
 [#my-id2.my-class3.my-class4; aria-label: My custom label!; custom-attr: mytext]This has lots of tags applied.
 
 [/]Error: nothing to close.
+```
+
+### Hyperlinks
+
+You can add hyperlinks to blocks. The TyperHext compiler decides how it will compile the code into HTML like that:
+
+>[!NOTE]
+>Tag blocks work the same way.
+
+**Example 1:**
+
+```thml
+Link []in[/]@https://typerhext.com/@ text
+```
+
+will compile to
+
+```html
+<p>
+    Link <a href="https://typerhext.com/">in</a> text
+</p>
+```
+
+**Example 2:**
+
+```thml
+Link [#mylink]in[/]@https://typerhext.com/@ text with tags
+```
+
+will compile to
+
+```html
+<p>
+    Link <a href="https://typerhext.com/" id="mylink">in</a> text
+</p>
+```
+
+**Example 3:**
+
+```thml
+[]@https://typerhext.com/@Link as block
+```
+
+will compile to
+
+```html
+<a href="https://typerhext.com/">
+    <p>
+        Link as block
+    </p>
+</a>
+```
+
+**Example 4:**
+
+```thml
+[ /]@https://typerhext.com/@Link over
+
+multiple blocks[/]
+```
+
+will compile to
+
+```html
+<a href="https://typerhext.com/">
+    <p>
+        Link over
+    </p>
+    <p>
+        multiple blocks
+    </p>
+</a>
 ```
 
 ### Styling
