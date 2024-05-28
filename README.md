@@ -12,7 +12,8 @@
 
 TyperHext is a markup language designed to be as powerful as HTML and as simple as Markdown.
 
-**Note:** This is still in development and not ready to use yet, but it will be soon!
+> [!CAUTION]
+> This is still in development and not ready to use yet, but it will be soon!
 
 ## Basic syntax
 
